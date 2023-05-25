@@ -1,0 +1,97 @@
+/*
+--- 01 Typography system
+
+- FONT SIZE SYSTEM (px)
+ 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+medium: 500
+semi-bold: 
+Bold: 700
+
+- Line heights
+Default: 1
+  1.5
+
+- Letter spacing
+  -0.5,
+
+ ---02 COLORS
+
+ - Primary: #9c36b5
+ - Tints: #f8f0fc
+ - Shades:#862e9c
+ - Accents:
+ - Greyes:#fff, #555,#777
+
+
+ --- 05 Shadows
+
+ --- 06 Border radius
+ Default: 9px
+ Medium: 11px
+
+ --- 07 Whitespace
+
+ - SPACING SYSTEM (px)
+ 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+        
+*/
+
+html {
+  /* font-size: 10px; */
+  /* 10px/16px=0.625=62.5% */
+  font-size: 62.5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1;
+  color: #555;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.secondary-heading {
+  font-size: 2.4rem;
+  text-align: center;
+  padding-top: 8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #666;
+  letter-spacing: 1.5px;
+  margin: 3.2rem 0;
+}
+
+.tertiary-heading {
+  font-size: 2rem;
+  color: #666;
+  font-weight: 600;
+  margin-bottom: 3.6rem;
+}
+
+.grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* .portfolio-img {
+  width: 9.6rem;
+  height: 9.6rem;
+} */
