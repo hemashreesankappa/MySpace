@@ -63,13 +63,19 @@
   .logo-img img {
     height: 2.4rem;
   }
+  .main-header {
+    margin: 0rem 2rem;
+  }
+  .main-nav-link {
+    font-size: 2.5rem;
+  }
 
   .hero-heading {
-    font-size: 3.6rem;
+    font-size: 4rem;
   }
 
   .hero-description {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .hero {
@@ -77,26 +83,222 @@
   }
   .btn {
     padding: 1.8rem 1.2rem;
-    font-size: 1.6rem;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+  }
+  .featured-in {
+    margin-left: 2rem;
   }
 
   .featured-list {
     gap: 3.6rem;
   }
 
+  .featured-img {
+    height: 3rem;
+  }
+
   .logo-img {
     height: 2.4rem;
   }
+  /* 
+  .process-section,
+  .portfolio-section,
+  .testimonial  */
+  .container {
+    /* margin-right: 1rem; */
+    margin-left: 6rem;
+  }
+
+  .process-subheading {
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
+
+  .process-description,
+  .testimonial-text {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #444;
+    letter-spacing: 1.1px;
+  }
+
+  .customer-name {
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 1.1px;
+  }
 
   .grid {
-    column-gap: 3.6rem;
+    /* column-gap: 3.6rem; */
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+
+  .copyright-text {
+    font-size: 1.4rem;
   }
 
   .container {
-    max-width: 90rem;
+    max-width: 85rem;
   }
 }
 
 /*****************************************/
-/* Below 960px ( tablets) */
+/* Below 790px ( mini tablets) */
 /*****************************************/
+@media (max-width: 50em) {
+  html {
+    /* 9px/16px=56.26% */
+    font-size: 45%;
+  }
+  /* .hero-section {
+    height: 50vh;
+  } */
+
+  .hero-text-box {
+    width: 100%;
+  }
+
+  .featured-in-heading {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  .secondary-heading {
+    font-size: 3.6rem;
+  }
+
+  .process-subheading {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  .process-description,
+  .testimonial-text {
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #444;
+    letter-spacing: 1.1px;
+  }
+
+  .customer-name {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 1.1px;
+  }
+
+  .grid--3-cols {
+    justify-items: center;
+  }
+
+  /* mobile navigation */
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    /* to slid navigation */
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* Hide navigation by default  */
+    /* display:none : allows no animation or transition */
+
+    /* 1. hide the element visually */
+    opacity: 0;
+    /* 2. Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+    /* 3. hide the element from screen readers */
+    visibility: hidden;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    color: #9c36b5;
+
+    text-decoration: none;
+  }
+
+  .cta-btn {
+    background-color: #fff;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+    z-index: 1;
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+}
+
+/*****************************************/
+/* Below 544px ( phones) */
+/*****************************************/
+@media (max-width: 34em) {
+  .hero {
+    width: 80%;
+  }
+
+  .hero-text-box {
+    width: 70%;
+  }
+
+  .container {
+    max-width: 50rem;
+  }
+
+  .featured-list {
+    gap: 1.8rem;
+  }
+
+  .featured-img {
+    height: 0.8rem;
+  }
+
+  .process-list,
+  .testimonial,
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallary-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
